@@ -27,7 +27,8 @@ export default function AddNewJSON() {
         <form onSubmit={handleSubmit}>
             <label htmlFor="">
                 Enter Your JSON DATA :
-                <textarea name="jsondata" required></textarea>
+                <textarea name="jsondata" placeholder={`questiongiven: <Contains the Question from NETWORKS LOG>\nmyanswers: <Contains Your local storage answers>\nNOTE: Iam not responsible for your DUMB form filling
+                `} required></textarea>
             </label>
             <br />
             <label htmlFor="">
