@@ -15,6 +15,7 @@ export default function Paper() {
             setdata(JSON.parse(doc.data().jsonData));
             setLoading(false)
         })
+        // eslint-disable-next-line
     }, [])
 
 

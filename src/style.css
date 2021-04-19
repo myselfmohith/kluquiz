@@ -71,16 +71,16 @@ nav button:focus #userData{
 }
 
 nav pre{
-    padding: 10px;
-    border: solid .5px #ff7300;
-    color: #ff7300;
+    padding: 5px 10px;
+    border: solid .5px #fff;
+    color: #fff;
     cursor: pointer;
     border-radius: 5px;
 }
 
 nav pre:hover{
-    background: #ff7300;
-    color: #fff;
+    background: #fff;
+    color: var(--brandcolor);
 }
 
 /* * ------------------------------------ */
@@ -242,7 +242,7 @@ nav pre:hover{
 #loading{
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%,50%);
     width: 100px;
     height: 100px;

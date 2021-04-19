@@ -35,6 +35,7 @@ export default function UserList() {
         return () => {
             // TODO: UNSUBSCRIBE FROM DATA FLOW
         }
+        // eslint-disable-next-line
     }, [])
 
 

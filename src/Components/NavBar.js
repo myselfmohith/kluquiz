@@ -15,7 +15,7 @@ export default function NavBar() {
                     <pre onClick={signOut}>LOGOUT</pre>
                 </div>
             </button>
-                : <pre onClick={signIn}>G - Login</pre>}
+                : <pre onClick={signIn}>GLogin</pre>}
         </nav>
     )
 }
