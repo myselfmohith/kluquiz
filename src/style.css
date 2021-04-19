@@ -1,0 +1,266 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+:root{
+    --brandcolor: #0089ff;
+}
+
+h1,h2,h3{
+    font-weight: 500;
+}
+
+/* * NavBar.js ========================== */
+
+nav{
+    padding: 10px;
+    background: var(--brandcolor);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+
+nav button{
+    border: none;
+    outline: none;
+    background: inherit;
+    position: relative;
+}
+
+#userIcon{
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    border: solid 2px #fff;
+}
+
+nav button:focus #userData{
+    display: flex;
+}
+
+#userData{
+    display: none;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px #00000050;
+    flex-direction: column;
+    width: 200px;
+    max-width: 90vw;
+}
+
+#userData *{
+    margin: 5px auto;
+}
+
+nav pre{
+    padding: 10px;
+    border: solid .5px #ff7300;
+    color: #ff7300;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav pre:hover{
+    background: #ff7300;
+    color: #fff;
+}
+
+/* * ------------------------------------ */
+
+
+/* * ExamCard.js ======================== */
+
+.examCard{
+    cursor: pointer;
+    width: 500px;
+    max-width: 90vw;
+    background: #fff;
+    height: fit-content;
+    padding: 10px;
+    margin: 10px auto auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 5px 1px #00000050;
+}
+
+.examCard:active{
+    filter: brightness(.9);
+}
+
+.examCard h3{
+    word-break: break-all;
+    margin-bottom: 10px;
+}
+
+.examCard .date{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
+    border-right: solid .5px #00000025;
+}
+
+.examCard .date span{
+    color: var(--brandcolor);
+}
+
+.examCard .date span:first-child{
+    font-size: 2em;
+}
+
+/* * ------------------------------------ */
+
+
+/* * UerList.js ========================= */
+
+#addNewUSERPAPER{
+    box-shadow: 1px 1px 5px 1px #00000050;
+    width: 75px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 50px;
+}
+
+
+#grid2x2{
+    max-width: 90vw;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+}
+
+/* * ------------------------------------ */
+
+
+
+/* * ExamUserCard.js ==================== */
+
+.exam-user-card{
+    display: flex;
+    width: 250px;
+    max-width: 90vw;
+    margin: 10px auto auto;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px #00000050;
+    padding: 10px;
+}
+
+.exam-user-card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.exam-user-card .paperInfo{
+    margin-left: 10px;
+    border-left: solid .5px #00000025;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.exam-user-card .paperInfo span{
+    margin: 5px 0 auto;
+}
+
+.exam-user-card .paperInfo span:last-child{
+    font-size: 1.1em;
+    color: var(--brandcolor);
+}
+
+/* * ------------------------------------ */
+
+
+/* * QuestionCard.js ===================== */
+
+.questionContainer *{
+    cursor: cell;
+}
+
+.questionContainer{
+    height: fit-content;
+    margin: 10px auto;
+    box-shadow: 1px 1px 5px 1px #00000050;
+    width: 90vw;
+    border-radius: 5px;
+}
+
+.questionContainer .question{
+    padding: 10px;
+    border-bottom: solid .5px #00000025;
+}
+
+.questionContainer ol{
+    list-style: none;
+    padding: 5px;
+}
+
+.questionContainer .option{
+    padding: 5px 10px;
+    border: solid .5px #00000025;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.questionContainer .selectedOption{
+    background: #0089ff50;
+}
+
+
+
+
+/* * ------------------------------------- */
+
+
+
+/* * Loader.js =========================== */
+
+#loading{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    width: 100px;
+    height: 100px;
+    border-top: solid 20px transparent;
+    border-left: solid 20px var(--brandcolor);
+    border-right: solid 20px var(--brandcolor);
+    border-bottom: solid 20px var(--brandcolor);
+    border-radius: 50%;
+    animation: rotate360 1.5s infinite forwards ease;
+}
+
+@keyframes rotate360 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* * ------------------------------------- */
