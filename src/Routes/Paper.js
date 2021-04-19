@@ -18,13 +18,22 @@ export default function Paper() {
         // eslint-disable-next-line
     }, [])
 
+    function getListData() {
+        try {
+            const items = data.questiongiven.map((ele, index) => <QuestionCard key={index} i={index + 1} ques={ele} ans={data.myanswers[index].answer} />)
+            return items
+        } catch (error) {
+            return <h1>ERROR</h1>
+        }
+    }
+
 
     if (loading) return <Loader />
 
     return (
         <>
             <h3>Questions</h3>
-            {data.questiongiven.map((ele,index) => <QuestionCard key={index} i={index+1} ques={ele} ans={data.myanswers[index].answer} />)}
+            {getListData()}
         </>
     )
 }

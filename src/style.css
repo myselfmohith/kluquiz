@@ -235,6 +235,58 @@ nav pre:hover{
 
 /* * ------------------------------------- */
 
+/* * AddNewJSON.js ======================= */
+
+form{
+    width: 90vw;
+    margin: 10px auto;
+}
+
+form label{
+    display: flex;
+    flex-direction: column;
+}
+
+form textarea,input{
+    border: solid .5px #00000050;
+    outline: none;
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+form textarea{
+    resize: none;
+    min-height: 60vh;
+    padding: 10px;
+    font-family: monospace;
+    border-radius: 10px;
+}
+
+form input{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+form textarea:focus,input:focus{
+    border: none;
+    box-shadow: 0 0 3px 1px #0089ff50;
+}
+
+form button{
+    background: var(--brandcolor);
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#error{
+    color: red;
+}
+
+/* * ------------------------------------- */
 
 
 /* * Loader.js =========================== */

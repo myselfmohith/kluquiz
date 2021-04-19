@@ -8,11 +8,11 @@ export default function AddNewJSON() {
     const his = useHistory();
     const { examID } = useParams();
 
-
     if (!user) return <Redirect to="/" />
 
     function handleSubmit(e) {
         e.preventDefault();
+
         const writeData = {
             uimgURL: user.photoURL,
             uname: user.displayName,
@@ -20,22 +20,20 @@ export default function AddNewJSON() {
             jsonData: e.target.jsondata.value
         }
         DB.collection('exams').doc(examID).collection('papers').add(writeData);
-        his.goBack();
+        his.push(`/${examID}`);
     }
 
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor="">
                 Enter Your JSON DATA :
-                <textarea name="jsondata" id="" cols="30" rows="10"></textarea>
+                <textarea name="jsondata" required></textarea>
             </label>
             <br />
             <label htmlFor="">
                 Enter your gained Marks :
-                 <input type="text" name="marks" />
+                 <input type="text" name="marks" required />
             </label>
-
-            <button type="reset">reset fields</button>
             <button type="submit">SAVE</button>
         </form>
     )
